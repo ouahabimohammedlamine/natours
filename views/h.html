@@ -1,0 +1,47 @@
+<form
+  action="/submit_user_data"
+  method="POST"
+  class="form form-user-data"
+  enctype="multipart/form-data"
+>
+  <div class="form__group">
+    <label class="form__label" for="name">Name</label>
+    <input
+      class="form__input"
+      id="name"
+      type="text"
+      value="Jonas Schmedtmann"
+      required=""
+      name="name"
+    />
+  </div>
+  <div class="form__group ma-bt-md">
+    <label class="form__label" for="email">Email address</label>
+    <input
+      class="form__input"
+      id="email"
+      type="email"
+      value="admin@natours.io"
+      required=""
+      name="email"
+    />
+  </div>
+  <div class="form__group form__photo-upload">
+    <img
+      class="form__user-photo"
+      src="/img/users/user-1.jpg"
+      alt="Jonas Schmedtmann photo"
+    /><input
+      class="form__upload"
+      type="file"
+      accept="image/*"
+      id="photo"
+      name="photo"
+    /><label for="photo">Choose new photo</label>
+  </div>
+  <div class="form__group right">
+    <button type="button" class="btn btn--small btn--green">
+      Save settings
+    </button>
+  </div>
+</form>
