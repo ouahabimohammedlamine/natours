@@ -18,7 +18,12 @@ router.patch(
 router.use(authController.protect);
 
 router.get('/Me', userController.getMe, userController.getUser);
-router.patch('/updateMe', userController.updateMe);
+router.patch(
+  '/updateMe',
+  userController.uploadUserPhoto,
+  userController.resizeUserPhoto,
+  userController.updateMe
+);
 router.delete('/deleteMe', userController.deleteMe);
 
 //for admins only routes  by the following middlware
